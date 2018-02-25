@@ -4,17 +4,12 @@ module Hamming
     # From the tests, we see that we need to raise ArgumentError if the string's lengths don't match
     raise ArgumentError if (string1.length != string2.length)
 
-    distance = 0
-    index = 0
-    while (index < string1.length)
-      if string1[index] != string2[index]
-        distance += 1
-      end
 
-      index += 1
+    (0...string1.length).count do |index|
+      string1[index] != string2[index]
     end
 
-    return distance
+
   end
 end
 
