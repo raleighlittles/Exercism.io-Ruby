@@ -1,1 +1,0 @@
-exercism submit PATH_TO_FILE
